@@ -1,0 +1,222 @@
+<!-- templates/contact.html -->
+{% extends 'companywebsite/base.html' %}
+
+{% block title %}Contact Us - HVAC & Refrigeration Automation Experts{% endblock %}
+
+{% block extra_css %}
+<style>
+    .contact-hero {
+        background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 123, 255, 0.9)), 
+                    url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 140px 0 80px;
+    }
+    
+    .contact-info-card {
+        border-left: 4px solid var(--primary-blue);
+        transition: all 0.3s;
+    }
+    
+    .contact-info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,86,179,0.15);
+    }
+    
+    .contact-form-card {
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        border: none;
+    }
+    
+    .form-control:focus {
+        border-color: var(--primary-blue);
+        box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+    }
+    
+    .service-option {
+        border: 2px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    
+    .service-option:hover {
+        border-color: var(--primary-blue);
+        background-color: rgba(0, 123, 255, 0.05);
+    }
+    
+    .service-option.selected {
+        border-color: var(--primary-blue);
+        background-color: rgba(0, 123, 255, 0.1);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="contact-hero">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-4">Contact Our Automation Experts</h1>
+        <p class="lead mb-0">Get specialized solutions for your refrigeration and HVAC automation needs</p>
+    </div>
+</section>
+
+<!-- Contact Info & Form -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <h2 class="section-title mb-4">Get In Touch</h2>
+                <p class="lead mb-4">
+                    Transform your operations with intelligent automation. Get expert guidance on PLC programming, 
+                    system integration, and energy optimization solutions tailored to your requirements.
+                </p>
+                
+                <div class="contact-info-card mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> Our Location</h5>
+                        <p class="mb-0">
+                            2 King Street West Unit #121 Hamilton, ON L8P 4S0<br>
+                            
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3"><i class="fas fa-phone text-primary me-2"></i> Contact Numbers</h5>
+                        <p class="mb-1"><strong>General Inquiries:</strong></p>
+                        <p class="mb-3">+1 905 512-0613</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3"><i class="fas fa-envelope text-primary me-2"></i> Email</h5>
+                        <p class="mb-1"><strong>Contact@tabreed.ca</p></strong>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="card contact-form-card">
+                    <div class="card-body p-4 p-md-5">
+                        <h2 class="mb-4">Send Us a Message</h2>
+                        <p class="text-muted mb-4">Fill out the form below and we'll get back to you within 24 hours</p>
+                        
+                        <form method="post" id="contactForm">
+                            {% csrf_token %}
+                            
+                            <!-- Render all form fields automatically -->
+                            {{ form.as_p }}
+                            
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i> Send Message
+                                </button>
+                            </div>
+                            
+                            <div class="form-text mt-3 text-center">
+                                By submitting this form, you agree to our privacy policy. We'll never share your information.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map & Location -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title center text-center mb-5">Our Location</h2>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-0">
+                        <div class="ratio ratio-16x9">
+                            <!-- Google Maps Embed - Replace with your actual embed code -->
+                            <iframe 
+                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.889921109586!2d-79.8719549!3d43.2571139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c9b837baecbff%3A0x94c032ab67df12d!2sStelco%20Tower%2C%202%20King%20St%20W%20%23121%2C%20Hamilton%2C%20ON%20L8P%201A1%2C%20Canada!5e0!3m2!1sen!2sca!4v1648765432100!5m2!1sen!2sca" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="mb-3">Visit Our Office</h5>
+                            <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> 2 King Street West Unit #121 Hamilton, ON L8P 4S0</p>
+                            <p class="mb-0"><i class="fas fa-car text-primary me-2"></i> Free parking available on-site</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Contact CTA -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Need Immediate Assistance?</h2>
+        <p class="lead mb-4">For emergency support or urgent inquiries, call our 24/7 hotline</p>
+        
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+            <div class="bg-white text-primary rounded p-3">
+                <h3 class="mb-0"><i class="fas fa-phone-volume me-2"></i> +1 905 512-0613</h3>
+                <small class="text-muted">24/7 Emergency Support</small>
+            </div>
+            <div class="text-white">
+                <p class="mb-0">Available for critical refrigeration and HVAC system emergencies</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Service selection styling
+        const serviceOptions = document.querySelectorAll('.service-option');
+        serviceOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                const radio = this.querySelector('input[type="radio"]');
+                radio.checked = true;
+                
+                // Remove selected class from all options
+                serviceOptions.forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Add selected class to clicked option
+                this.classList.add('selected');
+            });
+        });
+        
+        // Auto-select service from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceParam = urlParams.get('service');
+        if (serviceParam) {
+            const serviceRadio = document.querySelector(`input[value="${serviceParam}"]`);
+            if (serviceRadio) {
+                serviceRadio.checked = true;
+                const serviceOption = serviceRadio.closest('.service-option');
+                if (serviceOption) {
+                    serviceOption.classList.add('selected');
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}

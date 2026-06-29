@@ -1,0 +1,63 @@
+<!-- templates/companywebsite/success.html -->
+{% extends 'companywebsite/base.html' %}
+
+{% block title %}Message Sent Successfully{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card border-0 shadow-lg text-center">
+                <div class="card-body p-5">
+                    <!-- Success Icon -->
+                    <div class="mb-4">
+                        <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center"
+                             style="width: 80px; height: 80px;">
+                            <i class="fas fa-check fa-2x"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Success Message -->
+                    <h1 class="display-6 fw-bold mb-3 text-success">Message Sent Successfully!</h1>
+                    <p class="lead mb-4">
+                        Thank you for contacting ControlPro. We have received your message and 
+                        will get back to you within 24 hours.
+                    </p>
+                    
+                    <!-- Confirmation Details -->
+                    <div class="card border-light mb-4">
+                        <div class="card-body">
+                            <h5 class="mb-3">What happens next?</h5>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>We'll review your inquiry</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>An automation specialist will contact you</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>We'll provide a customized solution proposal</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Schedule a consultation if needed</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="d-grid gap-3">
+                        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane me-2"></i> Send Another Message
+                        </a>
+                        <a href="{% url 'home' %}" class="btn btn-outline-primary">
+                            <i class="fas fa-home me-2"></i> Return to Homepage
+                        </a>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="mt-5 pt-4 border-top">
+                        <p class="text-muted mb-2">Need immediate assistance?</p>
+                        <p class="mb-0">
+                            <i class="fas fa-phone text-primary me-2"></i>
+                            <strong>Call us:</strong> +1 905 512-0613
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

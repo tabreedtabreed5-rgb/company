@@ -1,0 +1,815 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$QIr1OUMFifK6OQYAvj0AiV$fqTfCeUKxUzg9f3TpBeU69S8FT9l5DaQvnErW1MFd0c=",
+    "last_login": "2025-12-29T17:30:20.788Z",
+    "is_superuser": true,
+    "username": "tabreed",
+    "first_name": "",
+    "last_name": "",
+    "email": "tabreed@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-12-17T15:44:03.126Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0a6q4xu7kglwqcvsr0tif5twq3fzqhhk",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHg8HTpvt9ABgakamhS2pXx35WkC93ec859sYD7VsPe8xpmYhcm2el3i5geuQ1Ad2y3haelbesc-VD4QTufFsrP6-H-HVTs9Vs7n8ESlSQtqqyN0P4stVSasAjhigLlwYJ1URlRtITkJCIQDGaMY-8Pxn82vQ:1vVthW:rujAtP8BPYHvQtN1t6VCCjIU64WwqD0bwEWAYyMZ_U0",
+    "expire_date": "2025-12-31T15:44:30.261Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "j9rcdvtd09frb8zmd1r8ofpv6uj722ce",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHg8HTpvt9ABgakamhS2pXx35WkC93ec859sYD7VsPe8xpmYhcm2el3i5geuQ1Ad2y3haelbesc-VD4QTufFsrP6-H-HVTs9Vs7n8ESlSQtqqyN0P4stVSasAjhigLlwYJ1URlRtITkJCIQDGaMY-8Pxn82vQ:1vZHAN:0-8Om4Q3oDJ1UW7Dc2ibbBrbgUxBOHNBHx9DUzBBoI4",
+    "expire_date": "2026-01-09T23:24:15.252Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ojv0enlubt9rea874wvauhaloe1kmy3b",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHg8HTpvt9ABgakamhS2pXx35WkC93ec859sYD7VsPe8xpmYhcm2el3i5geuQ1Ad2y3haelbesc-VD4QTufFsrP6-H-HVTs9Vs7n8ESlSQtqqyN0P4stVSasAjhigLlwYJ1URlRtITkJCIQDGaMY-8Pxn82vQ:1vaH4W:gfnerH69EHo8PPD_2aIJ05i4gIKYg0KxzWxK-PdSrt8",
+    "expire_date": "2026-01-12T17:30:20.796Z"
+  }
+},
+{
+  "model": "companywebsite.servicecategory",
+  "pk": 5,
+  "fields": {
+    "name": "Consulting",
+    "icon": "fas fa-project-diagram",
+    "description": "Automation strategy and process optimization consulting",
+    "sort_order": 2,
+    "is_active": true
+  }
+},
+{
+  "model": "companywebsite.servicecategory",
+  "pk": 6,
+  "fields": {
+    "name": "Programming",
+    "icon": "fas fa-code",
+    "description": "PLC, HMI, and custom scripting solutions",
+    "sort_order": 4,
+    "is_active": true
+  }
+},
+{
+  "model": "companywebsite.servicecategory",
+  "pk": 7,
+  "fields": {
+    "name": "BMS Integration",
+    "icon": "fas fa-building",
+    "description": "Building Management System integration for HVAC, lighting, and energy optimization",
+    "sort_order": 5,
+    "is_active": true
+  }
+},
+{
+  "model": "companywebsite.service",
+  "pk": 8,
+  "fields": {
+    "title": "PLC Programming &  HMI Design",
+    "slug": "plc-hmi-development",
+    "service_type": "programming",
+    "category": 6,
+    "icon": "fas fa-cog",
+    "summary": "Custom programming for all major PLC and HMI platforms with compliance to IEC 61131-3 standards.",
+    "full_description": "test",
+    "show_progress_bars": false,
+    "sort_order": 1,
+    "is_featured": false,
+    "is_active": true,
+    "created_at": "2025-12-17T16:54:58.178Z",
+    "updated_at": "2025-12-28T19:46:39.063Z"
+  }
+},
+{
+  "model": "companywebsite.service",
+  "pk": 9,
+  "fields": {
+    "title": "Retrofit",
+    "slug": "Retrofit",
+    "service_type": "electrical",
+    "category": 6,
+    "icon": "fas fa-cog",
+    "summary": "A retrofit is the process of adding new technology or features to older systems or equipment that were not originally designed for them. It's an upgrade or enhancement, not a full replacement. The primary goal is to extend the useful life, improve performance, or add modern capabilities to existing assets in a cost-effective way.",
+    "full_description": "A retrofit is the process of adding new technology or features to older systems or equipment that were not originally designed for them. It's an upgrade or enhancement, not a full replacement. The primary goal is to extend the useful life, improve performance, or add modern capabilities to existing assets in a cost-effective way.",
+    "show_progress_bars": false,
+    "sort_order": 2,
+    "is_featured": false,
+    "is_active": true,
+    "created_at": "2025-12-17T16:55:40.056Z",
+    "updated_at": "2025-12-28T20:00:24.195Z"
+  }
+},
+{
+  "model": "companywebsite.service",
+  "pk": 10,
+  "fields": {
+    "title": "BMS System Integration",
+    "slug": "bms-system-integration",
+    "service_type": "consulting",
+    "category": 7,
+    "icon": "fas fa-building",
+    "summary": "Complete Building Management System integration for HVAC, lighting, security, and energy management systems.",
+    "full_description": "We specialize in integrating Building Management Systems (BMS) that centralize control of HVAC, lighting, security, and energy management. Our solutions provide real-time monitoring, automated controls, and energy optimization for commercial and industrial facilities.\r\n\r\nOur BMS integration services include:\r\n� HVAC system integration and optimization\r\n� Lighting control system automation\r\n� Energy monitoring and management\r\n� Security system integration (access control, CCTV)\r\n� Fire alarm system integration\r\n� Power monitoring and distribution\r\n\r\nWe work with leading BMS platforms including Siemens Desigo, Johnson Controls Metasys, Schneider Electric EcoStruxure, and Honeywell Enterprise Buildings Integrator.",
+    "show_progress_bars": false,
+    "sort_order": 0,
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-17T17:45:43.434Z",
+    "updated_at": "2025-12-17T17:45:43.434Z"
+  }
+},
+{
+  "model": "companywebsite.service",
+  "pk": 11,
+  "fields": {
+    "title": "SCADA Integration",
+    "slug": "scada-integration",
+    "service_type": "programming",
+    "category": 6,
+    "icon": "fas fa-cog",
+    "summary": "SCADA Integration is the process of connecting a SCADA (Supervisory Control and Data Acquisition) system�the \"central brain\" for monitoring and controlling industrial equipment�to other software, hardware, and data sources. Its primary goal is to break down data silos, create a unified view of operations, and enable automated, intelligent decision-making across an organization.",
+    "full_description": "SCADA Integration is the process of connecting a SCADA (Supervisory Control and Data Acquisition) system�the \"central brain\" for monitoring and controlling industrial equipment�to other software, hardware, and data sources. Its primary goal is to break down data silos, create a unified view of operations, and enable automated, intelligent decision-making across an organization.",
+    "show_progress_bars": false,
+    "sort_order": 0,
+    "is_featured": false,
+    "is_active": true,
+    "created_at": "2025-12-28T19:48:10.078Z",
+    "updated_at": "2025-12-28T19:48:10.078Z"
+  }
+},
+{
+  "model": "companywebsite.service",
+  "pk": 12,
+  "fields": {
+    "title": "Industrial IoT",
+    "slug": "industrial-iot",
+    "service_type": "programming",
+    "category": 6,
+    "icon": "fas fa-cog",
+    "summary": "Industrial IoT (IIoT) is the use of interconnected sensors, instruments, and devices on industrial equipment and assets (like turbines, assembly lines, or shipping containers) to collect, analyze, and act on data. It's about creating a self-aware, connected industrial environment that can optimize itself, predict failures, and drive efficiency with minimal human intervention.",
+    "full_description": "Industrial IoT (IIoT) is the use of interconnected sensors, instruments, and devices on industrial equipment and assets (like turbines, assembly lines, or shipping containers) to collect, analyze, and act on data. It's about creating a self-aware, connected industrial environment that can optimize itself, predict failures, and drive efficiency with minimal human intervention.",
+    "show_progress_bars": false,
+    "sort_order": 0,
+    "is_featured": false,
+    "is_active": true,
+    "created_at": "2025-12-28T19:49:34.216Z",
+    "updated_at": "2025-12-28T19:49:34.216Z"
+  }
+},
+{
+  "model": "companywebsite.service",
+  "pk": 13,
+  "fields": {
+    "title": "Digitalization Services",
+    "slug": "digitalization-services",
+    "service_type": "electrical",
+    "category": 5,
+    "icon": "fas fa-cog",
+    "summary": "Remote Management Solutions are technology platforms that allow operators, technicians, or managers to monitor, control, troubleshoot, and optimize equipment, systems, or entire facilities from a distant location�be it a control room across the site, a home office, or a headquarters on another continent. The primary goal is to move expertise to the problem virtually, rather than moving people to the physical asset, thereby increasing efficiency, safety, and responsiveness.",
+    "full_description": "Remote Management Solutions are technology platforms that allow operators, technicians, or managers to monitor, control, troubleshoot, and optimize equipment, systems, or entire facilities from a distant location�be it a control room across the site, a home office, or a headquarters on another continent. The primary goal is to move expertise to the problem virtually, rather than moving people to the physical asset, thereby increasing efficiency, safety, and responsiveness.",
+    "show_progress_bars": false,
+    "sort_order": 0,
+    "is_featured": false,
+    "is_active": true,
+    "created_at": "2025-12-28T19:57:40.632Z",
+    "updated_at": "2025-12-28T19:58:22.120Z"
+  }
+},
+{
+  "model": "companywebsite.service",
+  "pk": 14,
+  "fields": {
+    "title": "Maintenance Automation Systems",
+    "slug": "maintenance-automation-systems",
+    "service_type": "programming",
+    "category": 6,
+    "icon": "fas fa-cog",
+    "summary": "Maintenance Automation Systems are software-driven platforms that automate the workflows, data collection, and decision-making processes around physical asset upkeep. They move maintenance from a reactive, manual, paper-based task to a predictive, data-driven, and automated operational function.",
+    "full_description": "Maintenance Automation Systems are software-driven platforms that automate the workflows, data collection, and decision-making processes around physical asset upkeep. They move maintenance from a reactive, manual, paper-based task to a predictive, data-driven, and automated operational function.",
+    "show_progress_bars": false,
+    "sort_order": 0,
+    "is_featured": false,
+    "is_active": true,
+    "created_at": "2025-12-28T20:02:03.879Z",
+    "updated_at": "2025-12-28T20:02:03.879Z"
+  }
+},
+{
+  "model": "companywebsite.servicefeature",
+  "pk": 11,
+  "fields": {
+    "service": 10,
+    "text": "HVAC System Integration",
+    "icon": "fas fa-fan",
+    "sort_order": 0
+  }
+},
+{
+  "model": "companywebsite.servicefeature",
+  "pk": 12,
+  "fields": {
+    "service": 10,
+    "text": "Energy Monitoring & Optimization",
+    "icon": "fas fa-chart-line",
+    "sort_order": 0
+  }
+},
+{
+  "model": "companywebsite.servicefeature",
+  "pk": 13,
+  "fields": {
+    "service": 10,
+    "text": "BACnet/Modbus Protocol Integration",
+    "icon": "fas fa-network-wired",
+    "sort_order": 0
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-12-17T15:45:01.284Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "servicecategory"
+    ],
+    "object_id": "1",
+    "object_repr": "test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-12-17T15:46:04.106Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "1",
+    "object_repr": "testtesttest",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"service feature\", \"object\": \"testtesttest - testfeature\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-12-17T15:52:59.518Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "servicecategory"
+    ],
+    "object_id": "1",
+    "object_repr": "test",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-12-17T15:53:48.932Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "servicecategory"
+    ],
+    "object_id": "2",
+    "object_repr": "Digital Engineering",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-12-17T15:54:29.502Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "servicecategory"
+    ],
+    "object_id": "3",
+    "object_repr": "Consulting",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-12-17T15:55:17.392Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "servicecategory"
+    ],
+    "object_id": "4",
+    "object_repr": "Electrical Design",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-12-17T15:58:15.485Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "3D Simulations & Digital Twins",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-12-17T16:00:21.347Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "3D Simulations & Digital Twins",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"service feature\", \"object\": \"3D Simulations & Digital Twins - Process simulation\"}}, {\"added\": {\"name\": \"service feature\", \"object\": \"3D Simulations & Digital Twins - Virtual commissioning\"}}, {\"added\": {\"name\": \"service feature\", \"object\": \"3D Simulations & Digital Twins - Performance optimization\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-12-17T16:03:01.453Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "3",
+    "object_repr": "Virtual Operator Training",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"service feature\", \"object\": \"Virtual Operator Training - Maintenance procedures\"}}, {\"added\": {\"name\": \"service feature\", \"object\": \"Virtual Operator Training - Emergency response\"}}, {\"added\": {\"name\": \"service feature\", \"object\": \"Virtual Operator Training - Standard operations\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-12-17T16:07:10.678Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "3D Simulations & Digital Twins",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-12-17T16:08:20.121Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "servicecategory"
+    ],
+    "object_id": "3",
+    "object_repr": "Consulting",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-12-17T16:42:05.676Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "servicecategory"
+    ],
+    "object_id": "5",
+    "object_repr": "Consulting",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-12-17T16:42:50.431Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "servicecategory"
+    ],
+    "object_id": "6",
+    "object_repr": "Programming",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-12-17T16:45:24.180Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "3D Simulations & Digital Twins",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"service feature\", \"object\": \"3D Simulations & Digital Twins - Process simulation\"}}, {\"added\": {\"name\": \"service feature\", \"object\": \"3D Simulations & Digital Twins - Virtual commissioning\"}}, {\"added\": {\"name\": \"service feature\", \"object\": \"3D Simulations & Digital Twins - Performance optimization\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-12-17T16:48:58.079Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "5",
+    "object_repr": "Power Distribution",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-12-17T16:49:55.794Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "3D Panel Design",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-12-17T16:50:32.152Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "7",
+    "object_repr": "Safety Systems",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-12-17T16:54:58.182Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "8",
+    "object_repr": "PLC & HMI Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-12-17T16:55:40.061Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "9",
+    "object_repr": "Custom Scripting",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-12-17T17:42:59.504Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "servicecategory"
+    ],
+    "object_id": "7",
+    "object_repr": "BMS Integration",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-12-17T17:45:43.440Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "10",
+    "object_repr": "BMS System Integration",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"service feature\", \"object\": \"BMS System Integration - HVAC System Integration\"}}, {\"added\": {\"name\": \"service feature\", \"object\": \"BMS System Integration - Energy Monitoring & Optimization\"}}, {\"added\": {\"name\": \"service feature\", \"object\": \"BMS System Integration - BACnet/Modbus Protocol Integration\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-12-26T23:24:42.455Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "servicecategory"
+    ],
+    "object_id": "2",
+    "object_repr": "Digital Engineering",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-12-26T23:24:55.089Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "servicecategory"
+    ],
+    "object_id": "4",
+    "object_repr": "Electrical Design",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-12-26T23:29:32.658Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "9",
+    "object_repr": "HVAC/Refrigeration Custom Programming",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Slug\", \"Summary\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-12-28T19:46:39.070Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "8",
+    "object_repr": "PLC Programming &  HMI Design",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-12-28T19:48:10.084Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "11",
+    "object_repr": "SCADA Integration",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-12-28T19:49:34.221Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "12",
+    "object_repr": "Industrial IoT",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-12-28T19:51:00.077Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "9",
+    "object_repr": "Retrofit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Slug\", \"Summary\", \"Full description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-12-28T19:57:40.637Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "13",
+    "object_repr": "Digitalization Services",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-12-28T19:58:22.127Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "13",
+    "object_repr": "Digitalization Services",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Service type\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-12-28T20:00:24.201Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "9",
+    "object_repr": "Retrofit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Service type\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-12-28T20:02:03.885Z",
+    "user": [
+      "tabreed"
+    ],
+    "content_type": [
+      "companywebsite",
+      "service"
+    ],
+    "object_id": "14",
+    "object_repr": "Maintenance Automation Systems",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]

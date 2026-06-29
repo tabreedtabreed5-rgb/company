@@ -1,0 +1,435 @@
+<!-- templates/companywebsite/services.html -->
+{% extends 'companywebsite/base.html' %}
+{% load static %}
+
+{% block title %}Our Services - HVAC & Refrigeration Automation Solutions{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero-section {
+        color: white;
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+    }
+    
+    .hero-section .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        pointer-events: none;
+    }
+    
+    .hero-section::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+        pointer-events: none;
+    }
+    
+    .hero-section .container {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .specialization-card {
+        border: 2px solid var(--primary-blue);
+        transition: all 0.3s;
+        height: 100%;
+    }
+    
+    .specialization-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,86,179,0.2);
+    }
+    
+    .tech-badge {
+        background: rgba(0, 123, 255, 0.1);
+        border: 1px solid rgba(0, 123, 255, 0.3);
+        color: var(--primary-blue);
+        font-size: 0.85rem;
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        margin: 0.2rem;
+        border-radius: 30px;
+        transition: all 0.2s;
+    }
+    
+    .tech-badge:hover {
+        background: var(--primary-blue);
+        color: white;
+        transform: scale(1.05);
+    }
+    
+    .compact-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0 40px;
+        box-shadow: 0 5px 20px rgba(0,86,179,0.1);
+        border-left: 5px solid var(--primary-blue);
+    }
+    
+    .badge-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero with Video Background -->
+<section class="hero-section">
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="{% static 'companywebsite/videos/istockphoto-2108474954-640_adpp_is.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-4">Our Automation Services</h1>
+        <p class="lead mb-0">Specialized solutions for refrigeration,HVAC, and industrial control systems</p>
+    </div>
+</section>
+
+<!-- Specialized Services -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto text-center">
+                <h2 class="section-title center">Specialized Automation Solutions</h2>
+                <p class="lead">
+                    ControlPro provides comprehensive automation services with specialized expertise 
+                    in refrigeration and HVAC.
+                </p>
+            </div>
+        </div>
+        
+<!-- Other Industries We Serve -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title center text-center"> Other Industries We Serve</h2>
+        <p class="text-center lead mb-5">Specialized automation solutions across diverse industrial sectors</p>
+        
+        <div class="row g-4">
+            <!-- Agri-Business -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-tractor fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Agri-Business</h5>
+                    <p class="text-muted small mb-3">
+                        Agriculture is rapidly evolving with automation playing a key role in addressing challenges like population growth, urbanization, and climate change. Smart farming solutions are essential for modern agricultural success.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We deliver automation expertise across the agricultural value chain – from greenhouse control systems and grain handling to milling operations and biogas production. Our team integrates process control, conveyance systems, and product tracking from farm to consumer, helping you reduce costs, maximize quality, and increase production efficiency.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Greenhouse Automation</span>
+                        <span class="badge bg-primary me-1 mb-1">Grain Handling</span>
+                        <span class="badge bg-primary me-1 mb-1">Milling Operations</span>
+                        <span class="badge bg-primary me-1 mb-1">Biogas Production</span>
+                        <span class="badge bg-primary mb-1">Process Control</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Food & Beverage -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-utensils fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Food & Beverage</h5>
+                    <p class="text-muted small mb-3">
+                        The food and beverage industry is rapidly embracing automation to address labor shortages and increase production efficiency. As facilities struggle to find qualified operators, automated solutions have become essential for maintaining competitiveness.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We specialize in integrating diverse machinery from global manufacturers onto unified production lines. Our expertise includes hygienic design, sanitary environments, and strict food safety protocols. We seamlessly connect batching systems, check weighers, x-ray and metal detection equipment, packaging machines, and palletizing systems – ensuring complete traceability and operational harmony.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Hygienic Design</span>
+                        <span class="badge bg-primary me-1 mb-1">Batching Systems</span>
+                        <span class="badge bg-primary me-1 mb-1">Check Weighers</span>
+                        <span class="badge bg-primary me-1 mb-1">Metal Detection</span>
+                        <span class="badge bg-primary mb-1">Packaging Integration</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Packaging and Palletizing -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-boxes fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Packaging and Palletizing</h5>
+                    <p class="text-muted small mb-3">
+                        Packaging and palletizing automation delivers substantial cost savings and quality improvements across virtually every manufacturing sector. These systems are critical components of modern production lines.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We design control strategies for automated packaging and palletizing systems that prioritize safety and flexibility for products of all shapes and sizes. Our solutions integrate area safety scanners, RFID and bar code readers, and vision-guided robots – providing reliable, adaptable automation for both manufacturing and distribution environments.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Vision Guided Robots</span>
+                        <span class="badge bg-primary me-1 mb-1">RFID Integration</span>
+                        <span class="badge bg-primary me-1 mb-1">Safety Scanners</span>
+                        <span class="badge bg-primary me-1 mb-1">Bar Code Readers</span>
+                        <span class="badge bg-primary mb-1">Palletizing Systems</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pharmaceutical / Life Sciences -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-flask fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Pharmaceutical Industry</h5>
+                    <p class="text-muted small mb-3">
+                        Automation is transforming life sciences manufacturing, driven by aging populations and increasing demand for efficient healthcare solutions. Robotics and automated systems provide critical advantages in production volume and product traceability.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We integrate complete production lines for pharmaceutical, biotech, and consumer health clients – whether new installations or existing line upgrades. Our experience spans form-fill-seal machines, weigh systems, sterilizers, leak detectors, and packaging equipment from diverse manufacturers. We create unified control systems that make disparate machinery appear seamless to your operators.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Form-Fill-Seal</span>
+                        <span class="badge bg-primary me-1 mb-1">Sterilizers</span>
+                        <span class="badge bg-primary me-1 mb-1">Leak Detectors</span>
+                        <span class="badge bg-primary me-1 mb-1">Weigh Systems</span>
+                        <span class="badge bg-primary mb-1">Traceability</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Marine -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-ship fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Marine</h5>
+                    <p class="text-muted small mb-3">
+                        Marine operations demand robust, precise automation that performs reliably in harsh environments. From energy efficiency to onboard systems and digital connectivity, every component must be optimized for performance and safety.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We partner with ship designers and marine engineers to develop advanced control and alarm monitoring systems tailored to vessel requirements. Our solutions include robust automation, sensor integration, and industrial networking designed for shipboard conditions. We provide end-to-end support – from system design and programming to data visualization and commissioning – helping build smarter, more efficient vessels.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Alarm Monitoring</span>
+                        <span class="badge bg-primary me-1 mb-1">Sensor Integration</span>
+                        <span class="badge bg-primary me-1 mb-1">Shipboard Networks</span>
+                        <span class="badge bg-primary me-1 mb-1">Data Visualization</span>
+                        <span class="badge bg-primary mb-1">Vessel Automation</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Water & Wastewater -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-water fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Water & Wastewater</h5>
+                    <p class="text-muted small mb-3">
+                        Water and wastewater facilities require dependable automation to manage critical infrastructure, maintain regulatory compliance, and protect public health. System reliability and data accuracy are non-negotiable in this sector.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We deliver automation solutions for municipalities, utilities, and private operators built for 24/7 performance. Our expertise includes SCADA systems, PLC controls, remote monitoring, and industrial networking specifically designed for water applications. We help clients optimize operations, reduce maintenance costs, and gain real-time visibility into pumping stations, treatment facilities, and distribution networks.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">SCADA Systems</span>
+                        <span class="badge bg-primary me-1 mb-1">Remote Monitoring</span>
+                        <span class="badge bg-primary me-1 mb-1">Pumping Stations</span>
+                        <span class="badge bg-primary me-1 mb-1">Treatment Facilities</span>
+                        <span class="badge bg-primary mb-1">Regulatory Compliance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+        <!-- Industrial Programming -->
+        {% if programming_services %}
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="section-title">Industrial Automation & Control Systems</h3>
+            </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            {% for service in programming_services %}
+            <div class="col-md-6">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <h4 class="mb-3">{{ service.title }}</h4>
+                        <p class="text-muted">{{ service.summary }}</p>
+                        {% if service.show_progress_bars %}
+                        <div class="mt-3">
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar bg-success" style="width: 90%"></div>
+                            </div>
+                            <small class="text-muted">PLC Programming</small>
+                            
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar bg-info" style="width: 85%"></div>
+                            </div>
+                            <small class="text-muted">HMI Development</small>
+                            
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-warning" style="width: 80%"></div>
+                            </div>
+                            <small class="text-muted">SCADA Systems</small>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Fallback programming services -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="section-title">Industrial Programming</h3>
+            </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <h4 class="mb-3">PLC & HMI Development</h4>
+                        <p class="text-muted">
+                            Custom programming for HVAC, refrigeration, and building automation 
+                            systems with compliance to industry standards.
+                        </p>
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <p class="mb-1"><strong>Platforms:</strong></p>
+                                <small class="text-muted">Schneider, Danfoss, Siemens, Allen-Bradley</small>
+                            </div>
+                            <div class="col-6">
+                                <p class="mb-1"><strong>Standards:</strong></p>
+                                <small class="text-muted">IEC 61131-3, BACnet, Modbus</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <h4 class="mb-3">SCADA & MES Systems</h4>
+                        <p class="text-muted">
+                            Advanced monitoring and control systems for building automation, 
+                            energy management, and refrigeration control.
+                        </p>
+                        <div class="mt-3">
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar bg-success" style="width: 90%"></div>
+                            </div>
+                            <small class="text-muted">Wonderware</small>
+                            
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar bg-info" style="width: 85%"></div>
+                            </div>
+                            <small class="text-muted">Ignition</small>
+                            
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-warning" style="width: 80%"></div>
+                            </div>
+                            <small class="text-muted">FactoryTalk</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- Process Table -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="section-title">Our Process</h3>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 80px; height: 80px;">
+                        <span class="display-6">1</span>
+                    </div>
+                    <h5>Consultation</h5>
+                    <p class="small text-muted">Requirements analysis and system planning</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 80px; height: 80px;">
+                        <span class="display-6">2</span>
+                    </div>
+                    <h5>Design</h5>
+                    <p class="small text-muted">System architecture and engineering</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 80px; height: 80px;">
+                        <span class="display-6">3</span>
+                    </div>
+                    <h5>Implementation</h5>
+                    <p class="small text-muted">Installation and programming</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 80px; height: 80px;">
+                        <span class="display-6">4</span>
+                    </div>
+                    <h5>Support</h5>
+                    <p class="small text-muted">Commissioning and maintenance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- CTA -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Automate Your Operations?</h2>
+        <p class="lead mb-4">Specialized automation solutions for improved efficiency and control</p>
+        
+        <a href="{% url 'contact' %}" class="btn btn-light btn-lg px-5">
+            Contact Us <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,379 @@
+/* ==========================================================================
+   Modern Header / Navigation - COOL REDESIGN
+   ========================================================================== */
+:root {
+    /* Add these new variables */
+    --neon-blue: #00f3ff;
+    --neon-purple: #9d4edd;
+    --holographic-sheen: linear-gradient(45deg, 
+        rgba(0, 243, 255, 0.3), 
+        rgba(157, 78, 221, 0.3), 
+        rgba(0, 243, 255, 0.3)
+    );
+    --glass-bg: rgba(26, 37, 47, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glow-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+}
+
+/* ==========================================================================
+   Navigation - Futuristic Glass Morphism Design
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 1rem 2.5rem;
+    z-index: 1000;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar.scrolled {
+    top: 10px;
+    width: 95%;
+    background: rgba(20, 30, 40, 0.9);
+    box-shadow: 
+        0 10px 40px rgba(0, 243, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo with Holographic Effect */
+.logo {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-text {
+    font-family: 'Orbitron', 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 
+        0 0 20px rgba(0, 243, 255, 0.5),
+        0 0 40px rgba(157, 78, 221, 0.3);
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.logo-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--holographic-sheen);
+    border-radius: 10px;
+    opacity: 0.3;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover .logo-text::before {
+    opacity: 0.5;
+    animation: hologram-shimmer 2s infinite;
+}
+
+.logo .accent {
+    color: var(--neon-blue);
+    position: relative;
+    display: inline-block;
+}
+
+.logo .accent::after {
+    content: '>';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--neon-blue);
+    font-weight: 300;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover .accent::after {
+    opacity: 1;
+    animation: blink 1s infinite;
+}
+
+/* Navigation Menu - Futuristic Design */
+.nav-menu {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-link {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--aluminum);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: linear-gradient(currentColor, currentColor) 
+        bottom / var(--d, 0) 2px no-repeat;
+    transition: 0.5s;
+}
+
+.nav-link:hover {
+    color: var(--neon-blue);
+    --d: 100%;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+}
+
+.nav-link.active {
+    color: var(--neon-blue);
+    --d: 100%;
+    text-shadow: 0 0 15px rgba(0, 243, 255, 0.9);
+}
+
+.nav-link::before {
+    content: '//';
+    position: absolute;
+    left: -1.5rem;
+    color: var(--neon-blue);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    opacity: 1;
+    animation: blink 1s infinite;
+}
+
+/* Hamburger Menu - Modern Design */
+.hamburger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: var(--glow-shadow);
+}
+
+.hamburger::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.hamburger:hover::before {
+    left: 100%;
+}
+
+.hamburger:hover {
+    transform: rotate(90deg);
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.8);
+}
+
+/* Navigation Indicator - Cool Line Animation */
+.nav-indicator {
+    position: absolute;
+    bottom: -10px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+    border-radius: 3px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+@keyframes hologram-shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: 200px 0; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { 
+        box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+    }
+    50% { 
+        box-shadow: 0 0 25px rgba(0, 243, 255, 0.8),
+                   0 0 35px rgba(157, 78, 221, 0.5);
+    }
+}
+
+/* ==========================================================================
+   Responsive Design for Header
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .navbar {
+        width: 95%;
+        padding: 1rem 2rem;
+    }
+    
+    .nav-menu {
+        gap: 2rem;
+    }
+    
+    .logo-text {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        top: 15px;
+        width: 90%;
+        padding: 1rem;
+    }
+    
+    .navbar.scrolled {
+        top: 10px;
+    }
+    
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background: rgba(20, 30, 40, 0.95);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 243, 255, 0.2);
+        box-shadow: 
+            0 20px 60px rgba(0, 0, 0, 0.4),
+            0 0 30px rgba(0, 243, 255, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav-menu.active {
+        top: calc(100% + 15px);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 0.75rem 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .nav-link::before {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+    }
+    
+    .logo-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        width: 92%;
+        padding: 0.75rem;
+    }
+    
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .nav-menu {
+        width: 92%;
+        padding: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   Add to existing CSS for hero section adjustment
+   ========================================================================== */
+.hero {
+    padding-top: 140px; /* Adjust for taller navbar */
+}
+
+/* Update grid-bg positioning */
+.grid-bg {
+    top: -60px;
+    height: calc(100% + 60px);
+}
+/* Style form fields */
+input[type="email"], input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input[type="email"]:focus, input[type="text"]:focus, textarea:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    outline: none;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}

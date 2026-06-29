@@ -1,0 +1,369 @@
+<!-- Create file: templates/companywebsite/home.html -->
+{% extends 'companywebsite/base.html' %}
+{% load static %}
+{% block title %}Industrial Automation Solutions | Refrigeration & HVAC Specialists{% endblock %}
+
+{% block extra_css %}
+<style>
+    .main-hero {
+        color: white;
+        padding: 160px 0 100px;
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+    }
+    
+    .main-hero .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        pointer-events: none;
+    }
+    
+    .main-hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+        pointer-events: none;
+    }
+    
+    .partner-logo {
+        filter: grayscale(0%);  
+        opacity: 1;  
+        transition: all 0.3s;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .partner-logo:hover {
+        filter: grayscale(0%);  
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    
+    .expertise-card {
+        border-top: 4px solid var(--primary-blue);
+        transition: all 0.3s;
+        height: 100%;
+    }
+    
+    .expertise-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,86,179,0.15);
+    }
+    
+    .stat-number {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--primary-blue);
+        line-height: 1;
+    }
+    
+    .product-badge {
+        background: rgba(0, 123, 255, 0.1);
+        border: 1px solid rgba(0, 123, 255, 0.3);
+        color: var(--primary-blue);
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        margin: 0.2rem;
+        border-radius: 30px;
+        font-size: 0.85rem;
+        transition: all 0.2s;
+    }
+    
+    .product-badge:hover {
+        background: var(--primary-blue);
+        color: white;
+        transform: scale(1.05);
+    }
+    
+    .compact-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0;
+        box-shadow: 0 5px 20px rgba(0,86,179,0.1);
+        border-left: 5px solid var(--primary-blue);
+    }
+    
+    .industry-card {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 15px;
+        padding: 30px;
+        height: 100%;
+        transition: all 0.3s;
+    }
+    
+    .industry-card:hover {
+        transform: translateY(-5px);
+        background: linear-gradient(135deg, var(--primary-blue) 0%, #007bff 100%);
+        color: white;
+    }
+    
+    .industry-card:hover h5,
+    .industry-card:hover p {
+        color: white !important;
+    }
+    
+    .automation-process {
+        position: relative;
+        padding-left: 40px;
+    }
+    
+    .automation-process:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background: var(--primary-blue);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    .process-1:before { content: '1'; }
+    .process-2:before { content: '2'; }
+    .process-3:before { content: '3'; }
+    .process-4:before { content: '4'; }
+
+    .product-thumb {
+        text-align: center;
+    }
+
+    .product-thumb img {
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 12px;
+        padding: 10px;
+        object-fit: contain;
+    }
+
+    .product-thumb p {
+        margin-top: 0.4rem;
+        margin-bottom: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Main Hero with Video Background -->
+<section class="main-hero">
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="{% static 'companywebsite/videos/istockphoto-2108474954-640_adpp_is.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1 class="display-3 fw-bold mb-4">Industrial Automation and Control Solutions</h1>
+                <p class="lead mb-4">
+                    Specialized PLC programming and automation solutions for the refrigeration and HVAC industry.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="{% url 'services' %}" class="btn btn-light btn-lg px-4">
+                        <i class="fas fa-cogs me-2"></i> Our Services
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 mt-5 mt-lg-0">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-4">
+                        <h4 class="text-center mb-4">Trusted by Industry Leaders</h4>
+                        <div class="row align-items-center g-4">
+                            <div class="col-6 text-center">
+                                <img src="{% static 'companywebsite/images/téléchargement (10).png' %}" 
+                                     alt="Schneider Electric" 
+                                     class="partner-logo w-75">
+                            </div>
+                            <div class="col-6 text-center">
+                                <img src="{% static 'companywebsite/images/téléchargement (11).png' %}" 
+                                     alt="Danfoss" 
+                                     class="partner-logo w-75">
+                            </div>
+                        </div>
+                        <p class="text-center text-muted small mt-3 mb-0">
+                            Schneider Electric EcoStruxure & Danfoss Alsmart Specialists
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Stats -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4 text-center">
+            
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <h5>Support Available</h5>
+                    <p class="text-muted small">Emergency technical support</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Expertise -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title center text-center">Our Core Expertise</h2>
+        <p class="text-center lead mb-5">Specialized automation solutions for refrigeration , HVAC, and industrial control systems</p>
+        
+        <div class="row">
+            <!-- Combined Refrigeration/HVAC Expertise - Compact Version -->
+            <div class="col-lg-8 mx-auto mb-4">
+                <div class="compact-section">
+                    <h3 class="text-center mb-3">
+                        <i class="fas fa-temperature-low text-primary me-2"></i>
+                        Refrigeration/HVAC Automation & Control
+                    </h3>
+                    <p class="text-center text-muted mb-4">
+                        Complete automation solutions for refrigeration, heating, ventilation, and air conditioning systems.
+                    </p>
+                    
+                    <div class="badge-group text-center">
+                        <span class="product-badge">VFD Control</span>
+                        <span class="product-badge">Energy Management</span>
+                        <span class="product-badge">Chiller Control</span>
+                        <span class="product-badge">Air Handler Control</span>
+                        <span class="product-badge">Defrost Optimization</span>
+                        <span class="product-badge">Energy Recovery</span>
+                        <span class="product-badge">Cold Storage</span>
+                        <span class="product-badge">Supermarket Refrigeration</span>
+                        <span class="product-badge">Process Cooling</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- General Automation Card -->
+            <div class="col-lg-6 col-md-6 mx-auto">
+                <div class="card expertise-card">
+                    <div class="card-body p-4">
+                        <div class="card-icon mx-auto mb-3">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h4 class="text-center mb-3">General Automation</h4>
+                        <p class="text-muted">
+                            Comprehensive industrial automation solutions including PLC programming, 
+                            HMI development, motion control, and system integration.
+                        </p>
+                        <div class="mt-3 text-center">
+                            <span class="badge product-badge me-1 mb-1">PLC Programming</span>
+                            <span class="badge product-badge me-1 mb-1">HMI/SCADA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Partners Section -->
+<div class="row justify-content-center mb-5">
+    <div class="col-12 col-lg-10 col-xl-8">
+        <div class="text-center mb-4">
+            <h2 class="section-title center d-inline-block pb-3">Technology Partners</h2>
+            <p class="lead mx-auto" style="max-width: 600px;">Working with industry leaders to deliver reliable automation solutions</p>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center g-4 mb-5">
+    <div class="col-12 col-lg-10 col-xl-8">
+        <!-- Schneider Electric -->
+        <div class="card border-primary border-2 mb-4">
+            <div class="card-body p-4 p-md-5">
+                <div class="d-flex flex-column flex-md-row align-items-center">
+                    <div class="text-center mb-4 mb-md-0 me-md-5">
+                        <div class="d-flex justify-content-center align-items-center bg-white p-3 rounded-circle shadow-sm" 
+                             style="width: 130px; height: 130px; border: 2px solid #dee2e6;">
+                            <img src="{% static 'companywebsite/images/téléchargement (10).png' %}" 
+                                 alt="Schneider Electric" 
+                                 style="max-width: 100px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="text-center text-md-start">
+                        <h4 class="mb-2">Schneider Electric Solutions</h4>
+                        <p class="text-muted mb-3">EcoStruxure Machine Expert - HVAC Specialists</p>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">Modicon M172</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">Modicon M173O</span>
+                        </div>
+                    </div>
+                    <!-- Product images fill the empty space on the right -->
+                    <div class="d-flex flex-wrap justify-content-center gap-4 ms-md-auto mt-4 mt-md-0">
+                        <div class="product-thumb">
+                            <img src="{% static 'companywebsite/images/modicon-m172.png' %}" 
+                                 alt="Modicon M172"
+                                 style="max-width: 110px; max-height: 110px; width: auto; height: auto;">
+                            <p class="small text-muted">Modicon M172</p>
+                        </div>
+                        <div class="product-thumb">
+                            <img src="{% static 'companywebsite/images/modicon-m173.png' %}" 
+                                 alt="Modicon M173"
+                                 style="max-width: 110px; max-height: 110px; width: auto; height: auto;">
+                            <p class="small text-muted">Modicon M173O</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Danfoss -->
+        <div class="card border-primary border-2">
+            <div class="card-body p-4 p-md-5">
+                <div class="d-flex flex-column flex-md-row align-items-center">
+                    <div class="text-center mb-4 mb-md-0 me-md-5">
+                        <div class="d-flex justify-content-center align-items-center bg-white p-3 rounded-circle shadow-sm" 
+                             style="width: 130px; height: 130px; border: 2px solid #dee2e6;">
+                            <img src="{% static 'companywebsite/images/téléchargement (11).png' %}" 
+                                 alt="Danfoss" 
+                                 style="max-width: 100px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="text-center text-md-start">
+                        <h4 class="mb-2">Danfoss Automation</h4>
+                        <p class="text-muted mb-3">Specialists in Alsmart Design Solutions (Alsmart®)</p>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Lite</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Lite+</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Mid</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Mid+</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Pro</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Pro+</span>
+                        </div>
+                    </div>
+                    <!-- Product image fills the empty space on the right -->
+                    <div class="d-flex flex-wrap justify-content-center ms-md-auto mt-4 mt-md-0">
+                        <div class="product-thumb">
+                            <img src="{% static 'companywebsite/images/image.png' %}" 
+                                 alt="Alsmart Pro+"
+                                 style="max-width: 130px; max-height: 130px; width: auto; height: auto;">
+                            <p class="small text-muted">Alsmart Pro+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
