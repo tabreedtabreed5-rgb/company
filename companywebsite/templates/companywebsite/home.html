@@ -1,7 +1,7 @@
 <!-- Create file: templates/companywebsite/home.html -->
 {% extends 'companywebsite/base.html' %}
 {% load static %}
-{% block title %}Industrial Automation Solutions | Refrigeration & HVAC Specialists{% endblock %}
+{% block title %}Industrial Automation Solutions | General Automation & Control Specialists{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -157,6 +157,29 @@
         margin-top: 0.4rem;
         margin-bottom: 0;
     }
+
+    .main-expertise-card {
+        border-top: 4px solid var(--primary-blue);
+        transition: all 0.3s;
+        height: 100%;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    }
+    
+    .main-expertise-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,86,179,0.2);
+    }
+
+    .secondary-expertise-card {
+        border-top: 4px solid #6c757d;
+        transition: all 0.3s;
+        height: 100%;
+    }
+    
+    .secondary-expertise-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(108,117,125,0.15);
+    }
 </style>
 {% endblock %}
 
@@ -172,7 +195,7 @@
             <div class="col-lg-7">
                 <h1 class="display-3 fw-bold mb-4">Industrial Automation and Control Solutions</h1>
                 <p class="lead mb-4">
-                    Specialized PLC programming and automation solutions for the refrigeration and HVAC industry.
+                    Comprehensive PLC programming, HMI development, and system integration solutions for industrial automation across multiple sectors.
                 </p>
                 <div class="d-flex flex-wrap gap-3">
                     <a href="{% url 'services' %}" class="btn btn-light btn-lg px-4">
@@ -221,54 +244,58 @@
     </div>
 </section>
 
-<!-- Our Expertise -->
+<!-- Our Expertise - Updated with General Automation as Primary -->
 <section class="py-5 bg-light">
     <div class="container">
         <h2 class="section-title center text-center">Our Core Expertise</h2>
-        <p class="text-center lead mb-5">Specialized automation solutions for refrigeration, HVAC, and industrial control systems</p>
+        <p class="text-center lead mb-5">Comprehensive automation solutions for industrial and commercial applications</p>
         
         <div class="row">
-            <!-- Combined Refrigeration/HVAC Expertise - Compact Version -->
+            <!-- General Automation - MAIN EXPERTISE (Now Primary) -->
             <div class="col-lg-8 mx-auto mb-4">
                 <div class="compact-section">
                     <h3 class="text-center mb-3">
-                        <i class="fas fa-temperature-low text-primary me-2"></i>
-                        Refrigeration/HVAC Automation & Control
+                        <i class="fas fa-industry text-primary me-2"></i>
+                        General Automation & Control Systems
                     </h3>
                     <p class="text-center text-muted mb-4">
-                        Complete automation solutions for refrigeration, heating, ventilation, and air conditioning systems.
+                        Complete industrial automation solutions including PLC programming, HMI development, 
+                        motion control, and system integration across multiple industries.
                         We select the optimal tools and platforms for each project to ensure peak performance.
                     </p>
                     
                     <div class="badge-group text-center">
-                        <span class="product-badge">VFD Control</span>
-                        <span class="product-badge">Energy Management</span>
-                        <span class="product-badge">Chiller Control</span>
-                        <span class="product-badge">Air Handler Control</span>
-                        <span class="product-badge">Defrost Optimization</span>
-                        <span class="product-badge">Energy Recovery</span>
-                        <span class="product-badge">Cold Storage</span>
-                        <span class="product-badge">Supermarket Refrigeration</span>
-                        <span class="product-badge">Process Cooling</span>
+                        <span class="product-badge">PLC Programming</span>
+                        <span class="product-badge">HMI/SCADA Development</span>
+                        <span class="product-badge">Motion Control</span>
+                        <span class="product-badge">System Integration</span>
+                        <span class="product-badge">Process Control</span>
+                        <span class="product-badge">Industrial Networking</span>
+                        <span class="product-badge">MES Integration</span>
+                        <span class="product-badge">IoT & Cloud Solutions</span>
+                        <span class="product-badge">Vision Systems</span>
+                        <span class="product-badge">Robotics Integration</span>
                     </div>
                 </div>
             </div>
             
-            <!-- General Automation Card -->
+            <!-- Refrigeration/HVAC - SECONDARY EXPERTISE -->
             <div class="col-lg-6 col-md-6 mx-auto">
-                <div class="card expertise-card">
+                <div class="card secondary-expertise-card">
                     <div class="card-body p-4">
                         <div class="card-icon mx-auto mb-3">
-                            <i class="fas fa-industry"></i>
+                            <i class="fas fa-temperature-low"></i>
                         </div>
-                        <h4 class="text-center mb-3">General Automation</h4>
+                        <h4 class="text-center mb-3">Refrigeration & HVAC Automation</h4>
                         <p class="text-muted">
-                            Comprehensive industrial automation solutions including PLC programming, 
-                            HMI development, motion control, and system integration.
+                            Specialized automation solutions for refrigeration, heating, ventilation, 
+                            and air conditioning systems with a focus on energy efficiency.
                         </p>
                         <div class="mt-3 text-center">
-                            <span class="badge product-badge me-1 mb-1">PLC Programming</span>
-                            <span class="badge product-badge me-1 mb-1">HMI/SCADA</span>
+                            <span class="badge product-badge me-1 mb-1">VFD Control</span>
+                            <span class="badge product-badge me-1 mb-1">Energy Management</span>
+                            <span class="badge product-badge me-1 mb-1">Chiller Control</span>
+                            <span class="badge product-badge me-1 mb-1">Cold Storage</span>
                         </div>
                     </div>
                 </div>
@@ -328,7 +355,7 @@
         </div>
         
         <!-- Danfoss -->
-        <div class="card border-primary border-2">
+        <div class="card border-secondary border-2">
             <div class="card-body p-4 p-md-5">
                 <div class="d-flex flex-column flex-md-row align-items-center">
                     <div class="text-center mb-4 mb-md-0 me-md-5">
